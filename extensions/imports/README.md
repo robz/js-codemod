@@ -47,7 +47,7 @@ module.exports = function(fileInfo, api) {
 
   imports.register(jscodeshift, imports.config.CJSBasicRequire);
 
-  return jscodeshift(file.source)
+  return jscodeshift(fileInfo.source)
     .addImport(statement`
       const MyRequireItem = require('MyRequireItem');
     `)
